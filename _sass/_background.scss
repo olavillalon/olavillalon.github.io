@@ -1,0 +1,142 @@
+
+.bg-blue-dark {
+	background: $color-blue-3;
+	overflow: hidden;
+}
+.bg-blue-space {
+	background: $color-blue-space;
+	overflow: hidden;
+}
+
+/*** Individual section styles and separators ***/
+
+/* Common style for pseudo-elements */
+section::before,
+section::after {
+	position: absolute;
+	content: '';
+	pointer-events: none;
+}
+
+/* Triangles */
+.ss-style-triangles::before,
+.ss-style-triangles::after {
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-triangles::before {
+	top: -50px;
+	background: #2980b9;
+}
+
+.ss-style-triangles::after {
+	bottom: -50px;
+	z-index: 10;
+	background: inherit;
+}
+
+/* Double Diagonal line */
+
+.ss-style-doublediagonal {
+	z-index: 1;
+	padding-top: 6em;
+	background: #2072a7;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+	top: 0;
+	left: -25%;
+	z-index: -1;
+	width: 150%;
+	height: 75%;
+	background: inherit;
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+	height: 50%;
+	background: #116094;
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+	-webkit-transform-origin: 3% 0;
+	transform-origin: 3% 0;
+}
+
+/* Half Circle */
+.ss-style-halfcircle::before,
+.ss-style-halfcircle::after {
+	left: 50%;
+	z-index: 10;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: inherit;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.ss-style-halfcircle::before {
+	top: -50px;
+}
+
+.ss-style-halfcircle::after {
+	bottom: -50px;
+}
+
+/* Big Triangle */
+svg#bigTriangleColor {
+	pointer-events: none;
+}
+
+#bigTriangleColor path {
+	fill: #3498db;
+	stroke: #3498db;
+	stroke-width: 2;
+}
+/* Multiple Triangles */
+.ss-style-multitriangles::before,
+.ss-style-multitriangles::after {
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-multitriangles::before {
+	top: -25px;
+	background: inherit;
+	box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+
+.ss-style-multitriangles::after {
+	bottom: -25px;
+	z-index: 10;
+	background: inherit;
+	box-shadow: -50px 50px 0 #3498db, 50px -50px 0 #3498db;
+}
+
+/* Big triangle with shadow */
+
+#trianglePath1 {
+	fill: #fff;
+	stroke: #fff;
+} 
+
+#trianglePath2 {
+	fill: $color-blue-3;
+	stroke: $color-blue-3;
+}
+
+#trianglePath3 {
+	fill: #ddd;
+	stroke: #ddd;
+}
