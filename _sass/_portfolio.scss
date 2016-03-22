@@ -46,11 +46,16 @@ Main components
 }
 .cd-item > img {
   display: block;
-  width: 100%;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+  -o-object-position: top center;
+  object-fit: cover;
+  object-position: top center;
 }
 @media only screen and (min-width: $mobile) {
   .cd-item {
-    width: 40%;
+    width: 250px;
     margin: 0 4% 2em 0;
   }
   .cd-item:nth-child(2n) {
@@ -60,7 +65,7 @@ Main components
 
 @media only screen and (min-width: $desktop) {
   .cd-item {
-    width: 22%;
+    width: 250px;
     margin: 0 4% 2.8em 0;
   }
   .cd-item:nth-child(2n) {
@@ -218,8 +223,12 @@ Main components
 }
 .cd-slider li img {
   display: block;
-  width: 100%;
-  max-width: 400px;  
+  width: 370px;
+  height: 30em;
+  -o-object-fit: contain;
+  -o-object-position: center center;
+  object-fit: contain;
+  object-position: center center; 
 }
 .cd-slider li.selected {
   position: relative;

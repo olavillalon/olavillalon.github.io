@@ -9,7 +9,8 @@ module.exports = function( grunt ) {
 
       my_target : {
         files : {
-          'js/custom.min.js' : [ 'js/custom.js' ]
+          'js/custom.min.js' : 
+          ['js/materialize.min.js', 'js/modernizr.js', 'js/classie.js', 'js/main.js', 'js/velocity.min.js', 'js/stepsForm.js', 'js/custom.js']
         }
       }
     }, // uglify

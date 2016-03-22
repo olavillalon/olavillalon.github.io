@@ -33,16 +33,20 @@ $(document).ready(function(){
 	$('.parallax').parallax();
 
 	//************************** PARTICULES ***********************************
-	  /*$('#particles').particleground({
-	    dotColor: '#017FBA',
-	    lineColor: '#017FBA'
-	  });
-	  $('.intro').css({
-	    'margin-top': -($('.intro').height() / 2)
-	  });*/
+	  var navHeight = $( window ).height() - 500;
+	  var screenWidth = $(window).width();
+	  
+	  if(screenWidth > 1000) {
+	    
+	      $('#particles').particleground({
+	        dotColor: '#B8D3D8',
+	        lineColor: '#017FBA'
+	      });
+	      $('.intro').css({
+	        'margin-top': -($('.intro').height() / 2)
+	      });
 
-	//************************** PORTFOLIO *************************************
-
+	   }//width
 	
 
 	//************************** STEP FORM *************************************
