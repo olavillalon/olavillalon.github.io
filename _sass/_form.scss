@@ -29,7 +29,7 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: calc(100% - 2em);
+	height: calc(100% - 1.4em);
 }
 
 .questions li {
@@ -92,7 +92,7 @@
 .questions input, textarea {
 	display: block;
 	margin: 0;
-	padding: 1em 1em 0.5em 0.7em;
+	padding: 0.5em 1em 0.5em 0.7em;
 	width: calc(100% - 2em);
 	border: none;
 	background: transparent;
@@ -309,14 +309,10 @@ input[type=text]::-ms-clear {
 }
 
 /* Adjust form for smaller screens */
-@media screen and (max-width: 44.75em) {
+@media screen and (max-width: $mobile) {
 	.simform {
 		font-size: 1.8em;
-	}
-}
-
-@media screen and (max-width: 33.5625em) {
-	.simform {
-		font-size: 1.2em;
+		text-align: center;
+		margin-top: 2em;
 	}
 }

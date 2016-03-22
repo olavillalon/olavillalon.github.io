@@ -1,26 +1,27 @@
 ---
 layout: default
-title: About Me
+title: About Me - Matheus Villalón
 ---
 
 <main>
     <div class="parallax-container custom-height">
         <div class="container">
         	<figure class="img-perfil">
-                <img src="images/perfil-5.png" alt="Photo Perfil Matheus">   
+                <img src="images/my-photo.png" alt="Photo Matheus Profile">   
             </figure>
             <h1 class="title-header right-align"> 
-                "How big is the universe ? <br/>
-                The universe is the size of your world . <br/>
-                How big is my world ? <br/>
-                It is the size of my dreams."
+                "How big is the universe? <br/>
+                The Universe is the size of your world . <br/>
+                How big is your world? <br/>
+                It is the size of your dreams." <br/>
+                <small>Augusto Cury</small>
             </h1>
             <a class="down" data-scroll="" href="#aboutme">
                 <i class="icon fa fa-angle-down fa-pulse"></i>
             </a>
         </div>        
         <div class="parallax">
-        	<img src="images/space-5.jpg">
+        	<img src="images/background-space.jpg" alt="Background Space Header">
         </div>        
     </div>
     <section id="aboutme" class="container center">
@@ -41,7 +42,7 @@ title: About Me
             <path id="trianglePath3" d="M0 100 L100 30 L100 52 Z" />
         </svg>
     </div>
-    <section class="container center">
+    <section id="skills" class="container center">
         <div class="row">
         	<h2 class="title-section">Skills</h2>
         	<p>These skills are basic for my work.</p>
@@ -101,7 +102,7 @@ title: About Me
     </section>
     <section class="container center">
         <div class="row">
-            <a class="waves-effect waves-light btn-large"><i class="fa fa-cloud-download"></i> Download My CV </a>
+            <!--<a class="waves-effect waves-light btn-large"><i class="fa fa-cloud-download"></i> Download My CV </a>-->
         </div>        
     </section>
     <div class="divisor absolute">
@@ -120,16 +121,32 @@ title: About Me
                 <div class="col m6 s12">
                     <p class="justify-align text-contact">Now that you know a little more about me and what I do, please feel free to get in touch. I will be glad to help you. I am available for freelance and partnerships. You can fill in the form beside and also read more about me on the links below.</p>
                     <ul class="social-icons list-inline icon-zoom">
-                        <li><i class="fa fa-envelope-o"></i></li>
-                        <li><i class="fa fa-linkedin"></i></li>
-                        <li><i class="fa fa-facebook"></i></li>
-                        <li><i class="fa fa-instagram"></i></li>
+                        <li>
+                            <a href="mailto:villalon.frontend@gmail.com" target="_blank">
+                                <i class="fa fa-envelope-o"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://br.linkedin.com/in/matheusvillalon" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/matheus.villalon" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/m_villalon/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
                     </ul>                    
                 </div>
 
                 <div class="col m6 s12">
 
-                    <form id="theForm" class="simform" autocomplete="off">
+                    <form action="mailto:villalon.frontend@gmail.com" enctype="text/plain" method="post" id="theForm" class="simform" autocomplete="off">
                         <div class="simform-inner">
                             <ol class="questions">
                                 <li>
@@ -141,11 +158,7 @@ title: About Me
                                     <input id="email" name="email" type="email"/>
                                 </li>
                                 <li>
-                                    <span><label for="sebject">Subject</label></span>
-                                    <input id="sebject" name="sebject" type="text"/>
-                                </li>
-                                <li>
-                                    <span><label for="message">Tell me.</label></span>
+                                    <span><label for="message">Message</label></span>
                                     <textarea id="message" name="message" cols="10" rows="4"></textarea>
                                 </li>
                             </ol><!-- /questions -->
