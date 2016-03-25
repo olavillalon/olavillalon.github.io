@@ -26,3 +26,6 @@ profile: false
 #sass compressed
 sass:
     style: compressed
+
+#permalink
+permalink: "/:title"
