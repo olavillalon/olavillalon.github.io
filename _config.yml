@@ -15,3 +15,10 @@ favicon: images/favicon.png
 
 # Build settings
 markdown: kramdown
+
+# html minify
+compress_html:
+clippings: all
+comments: all
+endings: []
+profile: false
