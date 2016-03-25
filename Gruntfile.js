@@ -15,11 +15,20 @@ module.exports = function( grunt ) {
       }
     }, // uglify
 
+    sass : {
+      dist : {
+        options : { style : 'compressed' },
+        files : {
+          'css/custom.css' : 'css/main.scss'
+        }
+      }
+    }, // sass
 
     watch : {
       dist : {
         files : [
-          'js/**/*'
+          'js/**/*',
+          '_sass/**/*'
         ],
 
         tasks : [ 'uglify' ]
@@ -31,11 +40,12 @@ module.exports = function( grunt ) {
 
   // Plugins do Grunt
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+  grunt.loadNpmTasks( 'grunt-contrib-sass' );
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
 
   // Tarefas que serão executadas
-  grunt.registerTask( 'default', [ 'uglify' ] );
+  grunt.registerTask( 'default', [ 'uglify', 'sass' ] );
 
   // Tarefa para Watch
   grunt.registerTask( 'w', [ 'watch' ] );

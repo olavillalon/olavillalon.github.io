@@ -1,14 +1,13 @@
 ---
 # Esse arquivo vira .css normal na /_site
 ---
-@charset "utf-8";
+@charset 'utf-8';
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		"font-awesome",
-        "custom",        
-        "portfolio",
-        "form",
-        "background",
-        "materialize"        
-;
+		'font-awesome',
+        'custom',        
+        'portfolio',
+        'form',
+        'background',
+        'materialize';
