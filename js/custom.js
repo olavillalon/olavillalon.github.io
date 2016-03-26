@@ -51,19 +51,29 @@ $(document).ready(function(){
 
 	//************************** STEP FORM *************************************
 	var theForm = document.getElementById( 'theForm' );
+	var messageEl = theForm.querySelector( '.final-message' );
 	new stepsForm( theForm, {
 		onSubmit : function( form ) {
 			// hide form
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
 			
-			form.submit();
-			/* or
-			AJAX request (maybe show loading indicator while we don't have an answer..)
-			*/
-			// let's just simulate something...
-			var messageEl = theForm.querySelector( '.final-message' );
-			messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-			classie.addClass( messageEl, 'show' );
+			form.submit(function(e) {
+				e.preventDefault();
+				$.ajax({
+					url: '//formspree.io/villalon.frontend@gmail.com',
+					method: 'POST',
+					data: $(this).serialize(),
+					dataType: 'json',					
+					success: function(data) {
+						messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+						classie.addClass( messageEl, 'show' );
+					},
+					error: function(err) {
+						messageEl.innerHTML = 'Ops! There was an error.';
+						classie.addClass( messageEl, 'show' );
+					}
+				});
+			});	//submit		
 		}
 	} );
 
