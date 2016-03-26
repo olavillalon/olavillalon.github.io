@@ -51,13 +51,20 @@ $(document).ready(function(){
 
 	//************************** STEP FORM *************************************
 	var theForm = document.getElementById( 'theForm' );
-	var messageEl = theForm.querySelector( '.final-message' );
 	new stepsForm( theForm, {
 		onSubmit : function( form ) {
 			// hide form
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-			
-			form.submit();	//submit		
+			console.log(form);
+			/*
+			form.submit()
+			or
+			AJAX request (maybe show loading indicator while we don't have an answer..)
+			*/
+			// let's just simulate something...
+			var messageEl = theForm.querySelector( '.final-message' );
+			messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+			classie.addClass( messageEl, 'show' );
 		}
 	} );
 
