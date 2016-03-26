@@ -57,24 +57,7 @@ $(document).ready(function(){
 			// hide form
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
 			
-			form.submit(function(e) {
-				console.log("esta no submit");
-				e.preventDefault();
-				$.ajax({
-					url: '//formspree.io/villalon.frontend@gmail.com',
-					method: 'POST',
-					data: $(this).serialize(),
-					dataType: 'json',					
-					success: function(data) {
-						messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-						classie.addClass( messageEl, 'show' );
-					},
-					error: function(err) {
-						messageEl.innerHTML = 'Ops! There was an error.';
-						classie.addClass( messageEl, 'show' );
-					}
-				});
-			});	//submit		
+			form.submit();	//submit		
 		}
 	} );
 
