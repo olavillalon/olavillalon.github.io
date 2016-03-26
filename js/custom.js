@@ -55,9 +55,9 @@ $(document).ready(function(){
 		onSubmit : function( form ) {
 			// hide form
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-			/*
-			form.submit()
-			or
+			
+			form.submit();
+			/* or
 			AJAX request (maybe show loading indicator while we don't have an answer..)
 			*/
 			// let's just simulate something...
