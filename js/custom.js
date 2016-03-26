@@ -58,6 +58,7 @@ $(document).ready(function(){
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
 			
 			form.submit(function(e) {
+				console.log("esta no submit");
 				e.preventDefault();
 				$.ajax({
 					url: '//formspree.io/villalon.frontend@gmail.com',
