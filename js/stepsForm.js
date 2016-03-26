@@ -39,7 +39,10 @@
 	}
 
 	stepsForm.prototype.options = {
-		onSubmit : function() { return false; }
+		onSubmit : function() { 
+			console.log("ESTA AQUI NO SUBMIT TIO");
+			return false; 
+		}
 	};
 
 	stepsForm.prototype._init = function() {
@@ -157,6 +160,7 @@
 					this.removeEventListener( transEndEventName, onEndTransitionFn );
 				}
 				if( self.isFilled ) {
+					console.log("ESTA ARQUIVADO");
 					self._submit();
 				}
 				else {
