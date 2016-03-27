@@ -55,16 +55,22 @@ $(document).ready(function(){
 		onSubmit : function( form ) {
 			// hide form
 			classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
-			console.log(form);
-			/*
-			form.submit()
-			or
-			AJAX request (maybe show loading indicator while we don't have an answer..)
-			*/
-			// let's just simulate something...
-			var messageEl = theForm.querySelector( '.final-message' );
-			messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
-			classie.addClass( messageEl, 'show' );
+			
+			$.ajax({
+				url: '//formspree.io/villalon.frontend@gmail.com',
+				method: 'POST',
+				data: $('#theForm').serialize(),
+				dataType: 'json',
+				success: function(data) {
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+					classie.addClass( messageEl, 'show' );
+				},
+				error: function(err) {
+					alert('Erro!');
+				}
+			});//ajax
+			
 		}
 	} );
 

@@ -250,7 +250,7 @@ layout: default
 
                 <div class="col m6 s12">
 
-                    <form action="https://formspree.io/villalon.frontend@gmail.com" enctype="text/plain" method="post" id="theForm" class="simform">
+                    <form action="https://formspree.io/villalon.frontend@gmail.com" method="post" enctype="application/json" id="theForm" class="simform">
                         <div class="simform-inner">
                             <ol class="questions">
                                 <li>
@@ -265,6 +265,8 @@ layout: default
                                     <span><label for="message">Message</label></span>
                                     <textarea id="message" name="message" cols="10" rows="4"></textarea>
                                 </li>
+
+                                <input type="hidden" name="_subject" value="Novo Contato - matheusvillalon.com">
                             </ol><!-- /questions -->
                             <button class="submit" type="submit">Send answers</button>
                             <div class="controls">
