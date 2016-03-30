@@ -45,6 +45,30 @@ $short-footer:480px;
   overflow: hidden;
 }
 
+.languages{
+  position: absolute;
+  left: 3em;
+  z-index: 300;
+
+  a{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.3em;
+    color: $color-white;
+    text-shadow: 1px 1px 10px black;
+    cursor: pointer;    
+  }//a
+
+  a:nth-child(1)::after{
+    content: '|';
+    right: 0;
+    color: #fff;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+  }
+
+}
+
 /* basically all styling from now on */
 .menu-toggle {
   z-index: 900;

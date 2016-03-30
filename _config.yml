@@ -6,10 +6,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Estou disponível para trabalhos remotos, parcerias ou simplesmente trocar uma idéia.
   Meu foco é Front End, mas também realizo trabalhos de Ui Design e Back End, em sites,
   portais, blogs, lojas virtuais e aplicativos híbridos.
-#baseurl: "http://matheusvillalon.com/" # the subpath of your site, e.g. /blog/
-#url: "http://matheusvillalon.com" # the base hostname & protocol for your site
+#baseurl: "http://olavillalon.github.io/"
+#url: "http://matheusvillalon.com"
 baseurl: "" 
-url: "http://localhost/"
+url: "http://127.0.0.1:4000/"
 
 favicon: images/favicon.png
 
@@ -19,6 +19,3 @@ markdown: kramdown
 #sass compressed
 sass:
     style: compressed
-
-#permalink
-#permalink: "/:title"
