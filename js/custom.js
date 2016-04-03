@@ -39,14 +39,11 @@ $(document).ready(function(){
 	  if(screenWidth > 1000) {
 	    
 	      $('#particles').particleground({
-	        dotColor: '#B8D3D8',
-	        lineColor: '#017FBA'
-	      });
-	      $('.intro').css({
-	        'margin-top': -($('.intro').height() / 2)
+	        dotColor: 'rgba(255,255,255,0.1)',
+	        lineColor: 'rgba(255,255,255,0.1)'
 	      });
 
-	   }//width
+	   }//width	   
 	
 
 	//************************** STEP FORM *************************************
@@ -76,3 +73,12 @@ $(document).ready(function(){
 
 
 });//ready
+
+//Starsky
+window.addEventListener('mousemove', function(e){
+	var dx = e.clientX / window.innerWidth - .5, dy = e.clientY / window.innerHeight - .5;
+	var cont = window.skyCont = window.skyCont || document.querySelector('.box-header');
+	var back = window.skyBack = window.skyBack || document.querySelector('#particles');
+	cont.style.webkitTransform = cont.style.transform = 'translate3d(-50%,-50%,50px) scale(.9) rotateY('+(dx*-22)+'deg) rotateX('+(dy*-10)+'deg)';
+	back.style.webkitTransform = back.style.transform = 'translate(' + (dx*05) + 'px,' + (dy*05) + 'px)';
+});

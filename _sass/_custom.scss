@@ -1,3 +1,6 @@
+$grad1: #2c3b54;
+$grad2: #43070e;
+$grad3: #13032d;
 $color-purple: #77445E;
 $color-blue-space: #383158;
 $color-peach: #E6D181;
@@ -38,11 +41,83 @@ $short-footer:480px;
 /* *******************************************************************
 * HEADER
 * *******************************************************************/
+#home{
+  height: 100vh;  
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+
+  background: linear-gradient(45deg, $grad1, $grad3, $grad2);
+  background-size: 600% 600%;
+
+  -webkit-animation: Gradient 50s ease infinite;
+  -moz-animation: Gradient 50s ease infinite;
+  -o-animation: Gradient 50s ease infinite;
+  animation: Gradient 50s ease infinite;
+}
 
 #particles {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; 
+}
+
+.img-perfil {
+  position: relative;
+
+  img{
+    position: absolute;        
+    width: 15em;
+    left: 50%;    
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 2;
+  }
+}//perfil
+
+.box-header{ 
+  position: absolute;  
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+}
+
+.box-center-absolute{
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.box-bottom-absolute{
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+@-webkit-keyframes Gradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes Gradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-o-keyframes Gradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes Gradient { 
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
 }
 
 .languages{
@@ -227,7 +302,6 @@ $short-footer:480px;
 }//shazam
 
 .title-header{
-  font-size: 2.5em;
   color: #fff;
   font-family: 'Ubuntu';
 
@@ -243,6 +317,9 @@ $short-footer:480px;
 
 }
 
+.title-size-m{ font-size: 2em; }
+.title-size-l{ font-size: 2.5em; }
+
 .icon-person{
   display: none;
   border-radius: 50%;
@@ -253,23 +330,13 @@ $short-footer:480px;
 
 .down {
     position: absolute;
-    bottom: 3em;
+    bottom: 1em;
     left: 50%;
     margin-left: -22px;
     display: block;
     text-align: center;
 
     .icon {
-        position: absolute;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        top: 50%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
         width: 1em;
         height: 1em;
         fill: #fff;
@@ -317,18 +384,6 @@ body.overlay-layer::after {
   z-index: 300;
 }
 
-.parallax-container.custom-height{
-  height: 100vh;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.parallax > img {
-  max-width: 1300px;
-  object-fit: cover;
-}
-
 ::-webkit-scrollbar-track{
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 0;
@@ -344,12 +399,6 @@ body.overlay-layer::after {
   border-radius: 0;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: $color-blue-space;
-}
-
-
-.box-header{ 
-  margin-left: 3em; 
-  width: 36em;
 }
 
 .text-justify{ text-align: justify; }
@@ -679,13 +728,6 @@ body.overlay-layer::after {
   color: #333;
 }
 
-.img-perfil img{
-  position: absolute;
-  left: 1em;
-  width: 16em;
-  margin-top: -4em;
-}
-
 /* tags */
 .tag-blue .tag{
   background-color: $color-blue;
@@ -737,38 +779,30 @@ footer ul li{
     }
 
     .box-header {
-        margin-left: 1em;
-        width: auto;
+        width: 100%;
         text-align: center;
-
-        .title-header{
-          font-size: 1.4em;
-        }
     }
 
     .title-header{
       font-size: 1em;
     }
-    
+
     .title-header strong{
-      font-size: 2em;
+      font-size: 3em;
     }
+
+    .title-size-m{ font-size: 1.3em; }
+    .title-size-l{ font-size: 1.4em; }    
 
     #particles{
       display: none;
-    }    
-
-    .down {
-      margin-left: 4px;     
     }
 
     .img-perfil{
-      margin: 0 40px;
+      
       img{
-        position: relative;
-        left: 0;
         width: 13em;
-        margin-top: 0;
+        top: 2em;
       }      
     }
 
