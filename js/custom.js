@@ -43,9 +43,8 @@ $(document).ready(function(){
 	        lineColor: 'rgba(255,255,255,0.1)'
 	      });
 
-	   }//width	   
-	
-
+	   }//width	   	
+	   
 	//************************** STEP FORM *************************************
 	var theForm = document.getElementById( 'theForm' );
 	new stepsForm( theForm, {
@@ -60,7 +59,8 @@ $(document).ready(function(){
 				dataType: 'json',
 				success: function(data) {
 					var messageEl = theForm.querySelector( '.final-message' );
-					messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+					var messageTxt = $('.final-message').text();
+					messageEl.innerHTML = messageTxt;
 					classie.addClass( messageEl, 'show' );
 				},
 				error: function(err) {
