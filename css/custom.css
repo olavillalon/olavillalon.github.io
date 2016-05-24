@@ -1,0 +1,42 @@
+/*
+Error: Invalid CSS after "@charset 'utf-8'": expected "{", was ";"
+        on line 4 of css/main.scss
+
+1: ---
+2: # Esse arquivo vira .css normal na /_site
+3: ---
+4: @charset 'utf-8';
+5: 
+6: // Import partials from `sass_dir` (defaults to `_sass`)
+7: @import
+8: 		'font-awesome',
+9:         'custom',        
+
+Backtrace:
+css/main.scss:4
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:637:in `block'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:631:in `ruleset'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:646:in `block_contents'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/home/matheus/.rvm/gems/ruby-2.1.5/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+/home/matheus/.rvm/gems/ruby-2.1.5/bin/sass:23:in `load'
+/home/matheus/.rvm/gems/ruby-2.1.5/bin/sass:23:in `<main>'
+/home/matheus/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `eval'
+/home/matheus/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"@charset 'utf-8'\": expected \"{\", was \";\"\A         on line 4 of css/main.scss\A \A 1: ---\A 2: # Esse arquivo vira .css normal na /_site\A 3: ---\A 4: @charset 'utf-8';\A 5: \A 6: // Import partials from `sass_dir` (defaults to `_sass`)\A 7: @import\A 8: 		'font-awesome',\A 9:         'custom',        "; }

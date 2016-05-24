@@ -15,7 +15,6 @@ module.exports = function( grunt ) {
       }
     }, // uglify
 
-
     watch : {
       dist : {
         files : [

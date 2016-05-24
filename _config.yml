@@ -1,16 +1,21 @@
 # Site settings
 title: Matheus Villalón, Frontend Developer - Online Portfolio
-email: olavillalon@gmail.com
+email: villalon.frontend@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "http://olavillalon.github.io/" # the subpath of your site, e.g. /blog/
-url: "http://olavillalon.github.io" # the base hostname & protocol for your site
+  Muito prazer, meu nome é Matheus Villalón e sou Desenvolvedor Front End.
+  Estou disponível para trabalhos remotos, parcerias ou simplesmente trocar uma idéia.
+  Meu foco é Front End, mas também realizo trabalhos de Ui Design e Back End, em sites,
+  portais, blogs, lojas virtuais e aplicativos híbridos.
+baseurl: "http://matheusvillalon.com/"
+url: "http://matheusvillalon.com/"
 #baseurl: "" 
-#url: "http://localhost/"
+#url: "http://127.0.0.1:4000/"
 
 favicon: images/favicon.png
 
 # Build settings
 markdown: kramdown
+
+#sass compressed
+sass:
+    style: compressed

@@ -1,16 +1,16 @@
 <footer class="bg-blue-dark">
     <div class="container">
           <ul class="list-inline">
-          	<li><a class="white-text" href="index.html">Home</a></li>
-            <li><a class="white-text" href="about.html">About</a></li>            
-            <li><a class="white-text" href="index.html#whatido">What I Do</a></li>
-            <li><a class="white-text" href="about.html#skills">Skills</a></li>
-            <li><a class="white-text" href="index.html#portfolio">Portfolio</a></li>
-            <li><a class="white-text" href="#contact">Contact</a></li>
+          	<li><a class="white-text" href="index">{{ page.menu.index }}</a></li>
+            <li><a class="white-text" href="{{ page.menu.about-page }}">{{ page.menu.about }}</a></li>            
+            <li><a class="white-text" href="index#whatido">{{ page.menu.whatido }}</a></li>
+            <li><a class="white-text" href="about#skills">{{ page.menu.skills }}</a></li>
+            <li><a class="white-text" href="index#portfolio">{{ page.menu.portfolio }}</a></li>
+            <li><a class="white-text" href="#contact">{{ page.menu.contact }}</a></li>
           </ul>      
     </div>
 </footer>
 
-<script src='js/jquery.js'></script>
-<script src='js/jquery.particleground.js'></script>
-<script src='js/custom.min.js'></script>
+<script src='{{ "/js/jquery.js" | prepend: site.baseurl }}'></script>
+<script src='{{ "/js/jquery.particleground.js" | prepend: site.baseurl }}'></script>
+<script src='{{ "/js/custom.min.js" | prepend: site.baseurl }}'></script>

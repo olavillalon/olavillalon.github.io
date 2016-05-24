@@ -39,7 +39,9 @@
 	}
 
 	stepsForm.prototype.options = {
-		onSubmit : function() { return false; }
+		onSubmit : function() { 
+			return false; 
+		}
 	};
 
 	stepsForm.prototype._init = function() {
