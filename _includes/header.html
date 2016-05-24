@@ -1,9 +1,5 @@
 <header>
-	<nav id="menu" role="navegation">
-		<!--icon-perfil-->
-		<div class="icon-person">
-			<img src="images/perfil.jpg" alt="Foto de Miniatura Matheus">
-		</div>
+	<nav id="menu">
 		<!--menu-->
 		<span class="menu-toggle">
 		  <i class="menu-open fa fa-bars fa-lg"></i>
@@ -12,22 +8,22 @@
 		<div class="menu-triangle">
 			<ul class="menu-items">
 			  <li>
-			  	<a href="index.html">
-			  		<i class="icon fa fa-home fa-3x"></i> Home </a>
+			  	<a href="index">
+			  		<i class="icon fa fa-home fa-3x"></i> {{ page.menu.index }} </a>
 			  </li>
 			  <li>
-			  	<a href="about.html">
-			  		<i class="icon fa fa-hand-peace-o fa-3x"></i> About Me </a>
+			  	<a href="{{ page.menu.about-page }}">
+			  		<i class="icon fa fa-hand-peace-o fa-3x"></i> {{ page.menu.about }} </a>
 			  </li>
 			  <li>
-			  	<a href="index.html#portfolio" id="portifa">
-			  		<i class="icon fa fa-object-group fa-3x"></i> Portfolio </a>
+			  	<a href="index#portfolio" id="portifa">
+			  		<i class="icon fa fa-object-group fa-3x"></i> {{ page.menu.portfolio }} </a>
 			  </li>			  			 
 			  <li>
 			  	<a href="#contact">
-			  		<i class="icon fa fa-paper-plane fa-3x"></i> Contact </a>
+			  		<i class="icon fa fa-paper-plane fa-3x"></i> {{ page.menu.contact }} </a>
 			  </li>
 			</ul>
 		</div>
-	</nav>
+	</nav>	
 </header>
