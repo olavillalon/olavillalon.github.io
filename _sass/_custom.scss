@@ -170,10 +170,10 @@ $short-footer:480px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -0.5em;
-    margin-left: -0.4em;
+    margin-top: -0.7em;
+    margin-left: -0.6em;
     transition: transform .7s $snap;
-    font-size: 3em;
+    font-size: 3.3em;
   }
   .menu-open {
     transform-origin: -100px -100px;
@@ -341,7 +341,7 @@ $short-footer:480px;
         height: 1em;
         fill: #fff;
         color: $color-white-rgba;
-        font-size: 3em;
+        font-size: 2em;
         transform-origin: 50% 50% 0px;
         border: 2px solid $color-white-rgba;
         border-radius: 50%;
@@ -523,13 +523,15 @@ body.overlay-layer::after {
   cursor: pointer;
   
   .fa {
-    font-size: 1.5em;
+    display: block;
+    font-size: 2em;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
     line-height: 40px;
     text-align: center;
     color: $color-blue-space;
+    background-color: $color-blue ;
     //color: rgba(255, 255, 255, 0.8);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -543,7 +545,6 @@ body.overlay-layer::after {
     -moz-box-shadow: 1px 1px 3px #333;
     box-shadow: 1px 1px 3px #333; 
   }
-
   .fa:hover, .fa:active { 
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -551,12 +552,6 @@ body.overlay-layer::after {
     -o-transform: scale(1.1);
     transform: scale(1.1); 
   }
-
-  .fa-envelope-o{background-color: $color-blue} 
-  .fa-linkedin{background-color: $color-blue ;} 
-  .fa-facebook{background-color: $color-blue ;}  
-  .fa-instagram{background-color: $color-blue ;} 
-
 
 }
 
